@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+langchain
+langchain-anthropic
+langchain-chroma
+langchain-huggingface
+sentence-transformers
+anthropic
+python-dotenv
