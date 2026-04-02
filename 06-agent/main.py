@@ -1,7 +1,13 @@
+from dotenv import load_dotenv
+import os
 import anthropic
 import json
 
-client = anthropic.Anthropic(api_key="API KEY HERE") # To Do: разобраться почему ключ не подхватывается из переменных окружения, а только при явной передаче
+
+load_dotenv("/Users/vladimirrusakov/Desktop/ai-llm-projects/06-agent/.env")
+
+client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
 
 # Загружаем каталог
 with open("/Users/vladimirrusakov/Desktop/catalog.txt", "r", encoding="utf-8") as f:
